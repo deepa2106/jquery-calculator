@@ -35,6 +35,7 @@ document.addEventListener("DOMContentLoaded", function() {
   equalsButton[0].addEventListener('click', function(event) {
     var display = document.getElementById("screen");
     display.innerHTML = calculation(number1, number2, operation);
+    number1 = 0;
   });
 });
 
