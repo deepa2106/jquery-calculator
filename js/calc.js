@@ -33,10 +33,17 @@ document.addEventListener("DOMContentLoaded", function() {
   var equalsButton = document.querySelectorAll('.equals');
   equalsButton[0].addEventListener('click', function(event) {
     var display = document.getElementById("screen");
-    display.innerHTML = calculation();
+    display.innerHTML = calculation(number1, number2, operation);
   });
 });
 
-function calculation() {
+function calculation(number1, number2, operation) {
+  if(operation === "+") {
+    return add(number1, number2);
 
+}
+
+
+function add(number1, number2) {
+  return number1 + number2;
 }
