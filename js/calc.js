@@ -38,7 +38,12 @@ document.addEventListener("DOMContentLoaded", function() {
   // performs and displays calculation on click
   equalsButton[0].addEventListener('click', function(event) {
     var display = document.getElementById("screen");
-    display.innerHTML = calculation(number1, number2, operation);
+    var answer;
+    if (number1 != 0)
+    {
+      answer = calculation(number1, number2, operation);
+    }
+    display.innerHTML = answer;
     number1 = 0;
   });
 
