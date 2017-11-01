@@ -40,10 +40,16 @@ document.addEventListener("DOMContentLoaded", function() {
 function calculation(number1, number2, operation) {
   if(operation === "+") {
     return add(number1, number2);
-
+  } else if (operation === "-") {
+    return subtract(number1, number2);
+  }
 }
 
 
 function add(number1, number2) {
   return number1 + number2;
+}
+
+function subtract(number1, number2) {
+  return number1 - number2;
 }
