@@ -1,7 +1,8 @@
 document.addEventListener("DOMContentLoaded", function() {
-
+  // Saves all number buttons
   var numberButtons = document.querySelectorAll('.buttonNum');
 
+  //numbers input for calculation
   var number1 = 0;
   var number2 = 0;
 
@@ -37,6 +38,7 @@ document.addEventListener("DOMContentLoaded", function() {
   });
 });
 
+// calculates answer by splitting based on the operator
 function calculation(number1, number2, operation) {
   if(operation === "+") {
     return add(number1, number2);
@@ -49,19 +51,22 @@ function calculation(number1, number2, operation) {
   }
 }
 
-
+// function to add
 function add(number1, number2) {
   return number1 + number2;
 }
 
+// function to subtract
 function subtract(number1, number2) {
   return number1 - number2;
 }
 
+// function to multiply
 function multiply(number1, number2) {
   return number1 * number2;
 }
 
+// function to divide
 function divide(number1, number2) {
   return number1 / number2;
 }
