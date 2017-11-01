@@ -33,6 +33,10 @@ document.addEventListener("DOMContentLoaded", function() {
   var equalsButton = document.querySelectorAll('.equals');
   equalsButton[0].addEventListener('click', function(event) {
     var display = document.getElementById("screen");
-    display.innerHTML = this.value;
+    display.innerHTML = calculation();
   });
 });
+
+function calculation() {
+
+}
