@@ -5,7 +5,9 @@ document.addEventListener("DOMContentLoaded", function() {
   //numbers input for calculation
   var number1 = 0;
   var number2 = 0;
+  var operation;
 
+  // display numbers on click
   for (var i = 0; i < numberButtons.length; i++) {
     var numberButton = numberButtons[i];
     numberButton.addEventListener('click', function(event) {
@@ -18,8 +20,7 @@ document.addEventListener("DOMContentLoaded", function() {
 
   var operatorButtons = document.querySelectorAll('.operator');
 
-  var operation;
-
+  // display operator on click
   for (var i = 0; i < operatorButtons.length; i++) {
     var operatorButton = operatorButtons[i];
     operatorButton.addEventListener('click', function(event) {
@@ -31,11 +32,24 @@ document.addEventListener("DOMContentLoaded", function() {
     });
   }
 
+
   var equalsButton = document.querySelectorAll('.equals');
+
+  // performs and displays calculation on click
   equalsButton[0].addEventListener('click', function(event) {
     var display = document.getElementById("screen");
     display.innerHTML = calculation(number1, number2, operation);
     number1 = 0;
+  });
+
+  var clearButton = document.querySelectorAll('.buttonClear');
+
+  // clears display on click
+  clearButton[0].addEventListener('click', function(event) {
+    var display = document.getElementById("screen");
+    display.innerHTML = "Sparta Calculator";
+    number1 = 0;
+    number2 = 0;
   });
 });
 
